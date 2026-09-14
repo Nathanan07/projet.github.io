@@ -1,97 +1,245 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon premier projet versionné avec GIT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brawlhalla — le jeu de combat où l'on gagne en éjectant</title>
+<meta name="description" content="Présentation de Brawlhalla, jeu de combat de plateforme de Blue Mammoth Games : principe de l'éjection, légendes, armes, modes de jeu et compétition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">MonProjet</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+<a class="saut-contenu" href="#principal">Aller au contenu</a>
+
+<header class="entete">
+  <div class="contenu">
+    <a class="marque" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 8.8 9 10 5.2-1.2 9-5 9-10V6l-9-4Zm0 3.2 6 2.7V12c0 3.5-2.4 6.3-6 7.4-3.6-1.1-6-3.9-6-7.4V7.9l6-2.7Z"/></svg>
+      Brawlhalla
+    </a>
+    <button class="menu-bouton" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a class="nav-lien" href="index.html" aria-current="page">Accueil</a></li>
+        <li><a class="nav-lien" href="legendes.html">Légendes &amp; armes</a></li>
+        <li><a class="nav-lien" href="competition.html">Jouer &amp; compétition</a></li>
+        <li><a class="nav-lien" href="#contact">Contact</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    <!-- Contenu principal -->
-    <main class="container my-5">
-        <h1 class="text-center mb-4">Mon premier projet versionné avec GIT</h1>
-        <p class="text-center">
-            Ceci est une page d'exemple utilisant Bootstrap et un footer avec formulaire de contact.
-        </p>
-    </main>
-    <main class="container my-5">
-        <h1 class="text-center mb-4">Mon premier projet versionné avec GIT</h1>
+<main id="principal">
 
-        <section class="mt-5">
-            <h2>Brawlhalla : présentation du jeu</h2>
-            <p>
-                <strong>Brawlhalla</strong> est un jeu de combat de type plateforme développé par
-                Blue Mammoth Games. Il est sorti initialement en 2017 et est aujourd’hui disponible
-                sur PC, PlayStation, Xbox, Nintendo Switch et mobile.
-            </p>
-            <p>
-                Le principe du jeu est simple : jusqu’à huit joueurs s’affrontent dans des arènes
-                variées. L’objectif n’est pas de vider une barre de vie, mais d’éjecter ses adversaires
-                hors de la zone de combat. Plus un joueur encaisse de coups, plus il devient facile
-                à projeter.
-            </p>
-            <p>
-                Brawlhalla propose un large choix de personnages appelés « légendes », chacun possédant
-                des armes et des capacités uniques. Le jeu met l’accent sur la rapidité, la précision
-                et la maîtrise des déplacements.
-            </p>
-            <p>
-                Très populaire en e-sport, Brawlhalla est apprécié pour son modèle free-to-play,
-                son gameplay accessible et sa profondeur compétitive.
-            </p>
-        </section>
-    </main>
+  <section class="hero">
+    <div class="contenu">
+      <h1>Sortir de l'arène</h1>
+      <p class="hero-chapeau">
+        Dans Brawlhalla, personne ne tombe à court de points de vie. On perd
+        quand on franchit le bord de l'écran — et plus on encaisse, plus on vole loin.
+      </p>
 
-    <!-- Footer avec formulaire de contact -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Contactez-nous</h2>
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Nom</label>
-                    <input type="text" class="form-control" placeholder="Votre nom">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" placeholder="Votre email">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" rows="3" placeholder="Votre message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </form>
-            <p class="text-center mt-4 mb-0">&copy; 2026 - Mon Projet</p>
+      <div class="arene">
+        <p class="arene-titre">Essayez : chaque coup augmente le pourcentage, donc la poussée.</p>
+        <div class="scene">
+          <div class="jauge">
+            <span class="jauge-valeur">0</span>
+            <span class="jauge-legende">% de dégâts accumulés</span>
+          </div>
+          <div class="plateforme"></div>
+          <div class="combattant"></div>
+          <div class="bordure-ko" title="Limite de l'arène"></div>
         </div>
-    </footer>
+        <div class="arene-actions">
+          <button class="bouton" data-action="frapper">Frapper</button>
+          <button class="bouton bouton-fantome" data-action="rejouer">Remettre à zéro</button>
+        </div>
+        <p class="arene-message">Frappe le combattant et observe la distance parcourue.</p>
+      </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      <p class="hero-meta">
+        <span>Développé par <b>Blue Mammoth Games</b></span>
+        <span>Sortie complète en <b>2017</b></span>
+        <span>Jusqu'à <b>8 joueurs</b></span>
+        <span>Modèle <b>free-to-play</b></span>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contenu">
+      <div class="section-intro">
+        <h2>Un jeu de combat de plateforme</h2>
+        <p>
+          Brawlhalla appartient à une famille très précise : les jeux de combat
+          en plateforme, où l'arène compte autant que l'adversaire. Le sol est
+          troué, les bords sont mortels, et la moitié des décisions concernent
+          votre position plutôt que votre attaque.
+        </p>
+        <p>
+          Le jeu est gratuit, sans contenu payant affectant l'équilibrage, et
+          tourne sur PC, PlayStation, Xbox, Nintendo Switch, iOS et Android avec
+          un jeu croisé entre toutes les plateformes.
+        </p>
+      </div>
+
+      <div class="grille">
+        <div class="pilier">
+          <h3>L'éjection, pas la barre de vie</h3>
+          <p>
+            Le pourcentage ne vous tue pas : il vous rend léger. À 20 %, un coup
+            vous déplace ; à 180 %, le même coup vous envoie hors champ.
+          </p>
+        </div>
+        <div class="pilier">
+          <h3>Deux armes par légende</h3>
+          <p>
+            Chaque personnage dispose de deux armes, ramassées en cours de match.
+            Apprendre une arme sert donc à plusieurs personnages à la fois.
+          </p>
+        </div>
+        <div class="pilier">
+          <h3>L'esquive comme ressource</h3>
+          <p>
+            L'esquive est limitée et directionnelle. Elle sert à se replacer
+            autant qu'à éviter, et la gâcher au mauvais moment coûte le match.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-claire">
+    <div class="contenu">
+      <h2>Carte d'identité</h2>
+      <dl class="fiche">
+        <dt>Développeur</dt>
+        <dd>Blue Mammoth Games, studio basé à Atlanta, racheté par Ubisoft en 2018</dd>
+
+        <dt>Genre</dt>
+        <dd>Jeu de combat de plateforme</dd>
+
+        <dt>Sortie</dt>
+        <dd>Accès anticipé en 2014, sortie complète en 2017</dd>
+
+        <dt>Plateformes</dt>
+        <dd>PC, PlayStation, Xbox, Nintendo Switch, iOS, Android</dd>
+
+        <dt>Modèle économique</dt>
+        <dd>Gratuit. Les achats concernent les apparences et le déblocage de personnages, jamais la puissance</dd>
+
+        <dt>Joueurs</dt>
+        <dd>De 1 contre 1 jusqu'à 8 en mêlée, en ligne ou en local</dd>
+
+        <dt>Particularité</dt>
+        <dd>De nombreuses légendes invitées issues d'autres univers, jouables comme les autres</dd>
+      </dl>
+
+      <div class="encadre">
+        <p>
+          <strong>Pourquoi le pourcentage ?</strong> Il remplace la barre de vie
+          par une mesure de vulnérabilité. Un joueur en difficulté n'est jamais
+          condamné : tant qu'il est dans l'arène, il peut revenir. C'est ce qui
+          rend les fins de match si nerveuses.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contenu">
+      <div class="section-intro">
+        <h2>Une première partie en quatre temps</h2>
+        <p>Ce que vous ferez pendant vos dix premières minutes, dans l'ordre.</p>
+      </div>
+      <ol class="etapes">
+        <li>
+          <h3>Choisir une légende</h3>
+          <p>Huit légendes tournent gratuitement chaque semaine. Prenez-en une dont une arme vous parle, l'épée ou le marteau pour commencer.</p>
+        </li>
+        <li>
+          <h3>Ramasser une arme</h3>
+          <p>Vous démarrez à mains nues. Les armes tombent au fil du match ; sans arme, vous ne disposez que d'attaques courtes.</p>
+        </li>
+        <li>
+          <h3>Rester au centre</h3>
+          <p>Le réflexe qui fait gagner le plus de matchs débutants : ne pas se battre au bord. La marge d'erreur y est nulle.</p>
+        </li>
+        <li>
+          <h3>Revenir sur la plateforme</h3>
+          <p>Éjecté ne veut pas dire perdu. Sauts, esquives aériennes et attaques de récupération servent à regagner le sol.</p>
+        </li>
+      </ol>
+      <p>
+        <a class="bouton" href="legendes.html">Voir les légendes et leurs armes</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied" id="contact">
+  <div class="contenu">
+    <div class="pied-grille">
+      <div>
+        <h2>Une question, une correction ?</h2>
+        <p>
+          Ce site est un projet d'apprentissage, versionné avec Git et publié
+          sur GitHub Pages. Si vous repérez une erreur sur le jeu ou une coquille,
+          écrivez-la ici.
+        </p>
+        <form class="formulaire" novalidate>
+          <div>
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Comment vous appeler" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="pour.vous@repondre.fr" required>
+          </div>
+          <div>
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option>Une erreur sur le contenu</option>
+              <option>Une question sur le jeu</option>
+              <option>Une remarque sur le site</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message" required></textarea>
+          </div>
+          <div>
+            <button class="bouton" type="submit">Envoyer le message</button>
+            <p class="aide retour" role="status"></p>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <h3 style="color:#e6c98a">Les pages</h3>
+        <ul class="pied-liens">
+          <li><a href="index.html">Accueil — le principe du jeu</a></li>
+          <li><a href="legendes.html">Légendes &amp; armes</a></li>
+          <li><a href="competition.html">Jouer &amp; compétition</a></li>
+        </ul>
+        <h3 style="color:#e6c98a">À savoir</h3>
+        <p>
+          Site non officiel, sans lien avec Blue Mammoth Games ni Ubisoft.
+          Les informations sont réunies à titre documentaire.
+        </p>
+      </div>
+    </div>
+
+    <div class="pied-bas">
+      <p>© 2026 — Projet versionné avec Git</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+# Systeme
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependances et build
+node_modules/
+dist/
+.cache/
+
+# Environnement
+.env
+.env.local
+
+# Logs
+*.log

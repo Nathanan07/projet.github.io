@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Légendes &amp; armes — Brawlhalla</title>
+<meta name="description" content="Les légendes de Brawlhalla, leurs deux armes et leurs statistiques, ainsi que le rôle de chaque arme du jeu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="saut-contenu" href="#principal">Aller au contenu</a>
+
+<header class="entete">
+  <div class="contenu">
+    <a class="marque" href="index.html">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 8.8 9 10 5.2-1.2 9-5 9-10V6l-9-4Zm0 3.2 6 2.7V12c0 3.5-2.4 6.3-6 7.4-3.6-1.1-6-3.9-6-7.4V7.9l6-2.7Z"/></svg>
+      Brawlhalla
+    </a>
+    <button class="menu-bouton" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul>
+        <li><a class="nav-lien" href="index.html">Accueil</a></li>
+        <li><a class="nav-lien" href="legendes.html" aria-current="page">Légendes &amp; armes</a></li>
+        <li><a class="nav-lien" href="competition.html">Jouer &amp; compétition</a></li>
+        <li><a class="nav-lien" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="principal">
+
+  <section class="hero">
+    <div class="contenu">
+      <h1>Légendes &amp; armes</h1>
+      <p class="hero-chapeau">
+        Une légende n'est pas définie par un style, mais par la paire d'armes
+        qu'elle peut ramasser. Choisir un personnage, c'est choisir deux façons
+        de se battre.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="contenu">
+      <div class="section-intro">
+        <h2>Quelques légendes</h2>
+        <p>
+          Le roster dépasse aujourd'hui la soixantaine de personnages. En voici
+          douze parmi les plus jouées, avec leur paire d'armes. Filtrez par arme
+          pour voir qui la partage.
+        </p>
+      </div>
+
+      <ul class="filtres" aria-label="Filtrer par arme">
+        <li><button class="filtre" data-filtre="tout" aria-pressed="true">Toutes</button></li>
+        <li><button class="filtre" data-filtre="epee" aria-pressed="false">Épée</button></li>
+        <li><button class="filtre" data-filtre="marteau" aria-pressed="false">Marteau</button></li>
+        <li><button class="filtre" data-filtre="lance" aria-pressed="false">Lance</button></li>
+        <li><button class="filtre" data-filtre="katars" aria-pressed="false">Katars</button></li>
+        <li><button class="filtre" data-filtre="pistolets" aria-pressed="false">Pistolets</button></li>
+        <li><button class="filtre" data-filtre="arc" aria-pressed="false">Arc</button></li>
+        <li><button class="filtre" data-filtre="hache" aria-pressed="false">Hache</button></li>
+      </ul>
+
+      <div class="grille">
+
+        <article class="legende" data-armes="epee|marteau">
+          <h3>Bödvar</h3>
+          <p class="origine">Viking — mascotte du jeu</p>
+          <p>Le personnage de départ : portée honnête, coups lisibles, aucune mauvaise surprise. Idéal pour apprendre les distances.</p>
+          <ul class="armes"><li class="arme">Épée</li><li class="arme">Marteau</li></ul>
+        </article>
+
+        <article class="legende" data-armes="pistolets|marteau">
+          <h3>Cassidy</h3>
+          <p class="origine">Shérif du Far West</p>
+          <p>Contrôle l'espace à distance avec les pistolets, puis conclut au marteau. Une légende qui récompense la patience.</p>
+          <ul class="armes"><li class="arme">Pistolets</li><li class="arme">Marteau</li></ul>
+        </article>
+
+        <article class="legende" data-armes="lance|lancefusee">
+          <h3>Orion</h3>
+          <p class="origine">Chevalier spatial</p>
+          <p>Grande portée verticale et déplacements amples. La lance-fusée sert autant à revenir sur la plateforme qu'à attaquer.</p>
+          <ul class="armes"><li class="arme">Lance</li><li class="arme">Lance-fusée</li></ul>
+        </article>
+
+        <article class="legende" data-armes="katars|lance">
+          <h3>Queen Nai</h3>
+          <p class="origine">Reine guerrière</p>
+          <p>Enchaînements rapides aux katars, allonge à la lance. Redoutable près des bords.</p>
+          <ul class="armes"><li class="arme">Katars</li><li class="arme">Lance</li></ul>
+        </article>
+
+        <article class="legende" data-armes="epee|lance">
+          <h3>Hattori</h3>
+          <p class="origine">Samouraï</p>
+          <p>Vitesse élevée et coups qui se chaînent bien. Demande de la précision, mais monte très haut en pression.</p>
+          <ul class="armes"><li class="arme">Épée</li><li class="arme">Lance</li></ul>
+        </article>
+
+        <article class="legende" data-armes="epee|lancefusee">
+          <h3>Sir Roland</h3>
+          <p class="origine">Chevalier</p>
+          <p>Défensif et robuste. La lance-fusée offre une charge qui traverse l'arène et surprend les adversaires immobiles.</p>
+          <ul class="armes"><li class="arme">Épée</li><li class="arme">Lance-fusée</li></ul>
+        </article>
+
+        <article class="legende" data-armes="katars|pistolets">
+          <h3>Lucien</h3>
+          <p class="origine">Voleur masqué</p>
+          <p>Très mobile, très fragile à l'éjection. Un style de harcèlement fondé sur les entrées et les sorties rapides.</p>
+          <ul class="armes"><li class="arme">Katars</li><li class="arme">Pistolets</li></ul>
+        </article>
+
+        <article class="legende" data-armes="hache|lance">
+          <h3>Brynn</h3>
+          <p class="origine">Valkyrie</p>
+          <p>La hache frappe fort et lentement : chaque coup placé compte double, chaque coup manqué se paie.</p>
+          <ul class="armes"><li class="arme">Hache</li><li class="arme">Lance</li></ul>
+        </article>
+
+        <article class="legende" data-armes="arc|katars">
+          <h3>Ember</h3>
+          <p class="origine">Archère des bois</p>
+          <p>L'arc permet de contrôler les trajectoires de retour adverses. Excellente pour punir les récupérations prévisibles.</p>
+          <ul class="armes"><li class="arme">Arc</li><li class="arme">Katars</li></ul>
+        </article>
+
+        <article class="legende" data-armes="hache|gantelets">
+          <h3>Teros</h3>
+          <p class="origine">Minotaure</p>
+          <p>Lourd, lent, dévastateur. Difficile à éjecter, et capable de renverser un match en deux coups.</p>
+          <ul class="armes"><li class="arme">Hache</li><li class="arme">Gantelets</li></ul>
+        </article>
+
+        <article class="legende" data-armes="epee|arc">
+          <h3>Koji</h3>
+          <p class="origine">Archer nomade</p>
+          <p>Alterne pression rapprochée à l'épée et zonage à l'arc. Une légende polyvalente qui s'adapte à l'adversaire.</p>
+          <ul class="armes"><li class="arme">Épée</li><li class="arme">Arc</li></ul>
+        </article>
+
+        <article class="legende" data-armes="marteau|katars">
+          <h3>Sentinel</h3>
+          <p class="origine">Justicier des années 1930</p>
+          <p>Résistant et direct. Les katars compensent la lenteur du marteau quand il faut conclure vite.</p>
+          <ul class="armes"><li class="arme">Marteau</li><li class="arme">Katars</li></ul>
+        </article>
+
+      </div>
+
+      <p class="vide" hidden>Aucune légende de cette sélection dans la liste ci-dessus.</p>
+    </div>
+  </section>
+
+  <section class="section section-claire">
+    <div class="contenu">
+      <div class="section-intro">
+        <h2>Ce que chaque arme apporte</h2>
+        <p>
+          Les armes se partagent entre les légendes. Maîtriser l'épée, c'est
+          savoir jouer une dizaine de personnages différents.
+        </p>
+      </div>
+
+      <div class="tableau-enveloppe">
+        <table>
+          <caption>Rôle et tempérament des principales armes du jeu</caption>
+          <thead>
+            <tr>
+              <th scope="col">Arme</th>
+              <th scope="col">Portée</th>
+              <th scope="col">Vitesse</th>
+              <th scope="col">Ce qu'elle fait bien</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Épée</th><td>Moyenne</td><td>Rapide</td><td>Enchaîner proprement, sans point faible marqué</td></tr>
+            <tr><th scope="row">Marteau</th><td>Moyenne</td><td>Lente</td><td>Éjecter tôt, dès 80 % de dégâts</td></tr>
+            <tr><th scope="row">Lance</th><td>Longue</td><td>Moyenne</td><td>Tenir l'adversaire à distance</td></tr>
+            <tr><th scope="row">Katars</th><td>Courte</td><td>Très rapide</td><td>Accumuler du pourcentage en continu</td></tr>
+            <tr><th scope="row">Pistolets</th><td>Longue</td><td>Rapide</td><td>Se replacer et harceler à couvert</td></tr>
+            <tr><th scope="row">Arc</th><td>Très longue</td><td>Moyenne</td><td>Punir les retours vers la plateforme</td></tr>
+            <tr><th scope="row">Hache</th><td>Moyenne</td><td>Lente</td><td>Frapper fort avec un timing lisible</td></tr>
+            <tr><th scope="row">Lance-fusée</th><td>Longue</td><td>Moyenne</td><td>Traverser l'arène et revenir de loin</td></tr>
+            <tr><th scope="row">Gantelets</th><td>Courte</td><td>Rapide</td><td>Empêcher l'adversaire de se dégager</td></tr>
+            <tr><th scope="row">Faux</th><td>Longue</td><td>Moyenne</td><td>Couvrir plusieurs angles à la fois</td></tr>
+            <tr><th scope="row">Orbe</th><td>Moyenne</td><td>Moyenne</td><td>Contrôler une zone avec des projectiles</td></tr>
+            <tr><th scope="row">Canon</th><td>Moyenne</td><td>Lente</td><td>Gros dégâts sur un adversaire immobilisé</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="encadre">
+        <p>
+          <strong>Les quatre statistiques.</strong> Chaque légende répartit
+          22 points entre force, dextérité, défense et vitesse. La force augmente
+          la puissance d'éjection, la dextérité la vitesse des armes à distance,
+          la défense la résistance à la poussée, et la vitesse le déplacement au sol.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pied">
+  <div class="contenu">
+    <div class="pied-grille">
+      <div>
+        <h2>Continuer</h2>
+        <p>
+          Vous savez qui jouer et avec quoi. Reste à savoir dans quel mode, et
+          comment le jeu se pratique en compétition.
+        </p>
+        <p><a class="bouton" href="competition.html">Jouer &amp; compétition</a></p>
+      </div>
+      <div>
+        <h3 style="color:#e6c98a">Les pages</h3>
+        <ul class="pied-liens">
+          <li><a href="index.html">Accueil — le principe du jeu</a></li>
+          <li><a href="legendes.html">Légendes &amp; armes</a></li>
+          <li><a href="competition.html">Jouer &amp; compétition</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <p>© 2026 — Projet versionné avec Git</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,616 @@
+/* ==========================================================================
+   Brawlhalla — feuille de style principale
+   Palette : lumière froide du nord, laiton, braise
+   ========================================================================== */
+
+:root {
+  --ciel:    #edeff4;
+  --givre:   #f8f9fc;
+  --blanc:   #ffffff;
+  --encre:   #141a2e;
+  --bleu:    #27365e;
+  --brume:   #6b7590;
+  --laiton:  #b07d2b;
+  --laiton-clair: #e6c98a;
+  --braise:  #9e2b2b;
+  --trait:   #d3d8e4;
+
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans:  "Archivo", "Helvetica Neue", Arial, sans-serif;
+
+  --marge: clamp(1.25rem, 5vw, 4rem);
+  --largeur: 68rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ciel);
+  color: var(--encre);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.68;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--bleu); text-underline-offset: 3px; }
+a:hover { color: var(--braise); }
+
+:focus-visible {
+  outline: 3px solid var(--laiton);
+  outline-offset: 3px;
+}
+
+.contenu {
+  width: 100%;
+  max-width: var(--largeur);
+  margin-inline: auto;
+  padding-inline: var(--marge);
+}
+
+.saut-contenu {
+  position: absolute;
+  left: -9999px;
+  background: var(--encre);
+  color: var(--ciel);
+  padding: .75rem 1.25rem;
+  z-index: 100;
+}
+.saut-contenu:focus { left: 1rem; top: 1rem; }
+
+/* --- Titres ------------------------------------------------------------- */
+
+h1, h2, h3, .marque, .nav-lien, .bouton, .etiquette {
+  font-family: var(--sans);
+  font-variation-settings: "wdth" 118;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 9vw, 5.5rem);
+  font-weight: 800;
+  line-height: .92;
+  letter-spacing: -.015em;
+  margin: 0 0 1.25rem;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-variation-settings: "wdth" 105;
+  margin: 0 0 .4rem;
+}
+
+p { margin: 0 0 1.1rem; max-width: 62ch; }
+
+/* --- En-tête et navigation ---------------------------------------------- */
+
+.entete {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--encre);
+  color: var(--ciel);
+  border-bottom: 3px solid var(--laiton);
+}
+
+.entete .contenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 4.25rem;
+}
+
+.marque {
+  color: var(--ciel);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: .02em;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.marque svg { width: 22px; height: 22px; fill: var(--laiton-clair); }
+
+.nav { margin-left: auto; }
+
+.nav ul {
+  display: flex;
+  gap: .35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-lien {
+  display: block;
+  padding: .5rem .85rem;
+  color: #c3cadd;
+  text-decoration: none;
+  font-size: .95rem;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+}
+.nav-lien:hover { color: var(--blanc); background: #1e2744; }
+.nav-lien[aria-current="page"] {
+  color: var(--blanc);
+  border-bottom-color: var(--laiton);
+}
+
+.menu-bouton {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 1px solid #3a456b;
+  color: var(--ciel);
+  border-radius: 3px;
+  padding: .5rem .7rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* --- Hero --------------------------------------------------------------- */
+
+.hero {
+  background: var(--encre);
+  color: var(--ciel);
+  padding-block: clamp(3rem, 8vw, 5.5rem) clamp(3rem, 7vw, 4.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  /* horizon de brume derrière le titre */
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  background: linear-gradient(to top, #1b2340, transparent);
+  pointer-events: none;
+}
+
+.hero .contenu { position: relative; z-index: 1; }
+
+.hero h1 {
+  font-variation-settings: "wdth" 125;
+  font-size: clamp(3rem, 13vw, 8.5rem);
+  letter-spacing: -.03em;
+  color: var(--blanc);
+}
+
+.hero-chapeau {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  color: #b9c2da;
+  max-width: 46ch;
+  margin-bottom: 2rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  font-family: var(--sans);
+  font-size: .9rem;
+  color: #8f9ab8;
+  border-top: 1px solid #2c3556;
+  padding-top: 1rem;
+  margin-top: 2.5rem;
+}
+.hero-meta span { padding-block: .2rem; }
+.hero-meta b { color: var(--laiton-clair); font-weight: 600; }
+
+/* --- Démo ring-out ------------------------------------------------------ */
+
+.arene {
+  margin-top: 2.5rem;
+  background: #1a2240;
+  border: 1px solid #2f3a5e;
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+
+.arene-titre {
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 600;
+  color: #97a2c0;
+  margin: 0 0 .9rem;
+  max-width: none;
+}
+
+.scene {
+  position: relative;
+  height: 170px;
+  background:
+    repeating-linear-gradient(90deg, #202a4c 0 1px, transparent 1px 48px),
+    #141b33;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bordure-ko {
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 0;
+  width: 3px;
+  background: repeating-linear-gradient(to bottom, var(--braise) 0 8px, transparent 8px 16px);
+}
+
+.plateforme {
+  position: absolute;
+  left: 8%;
+  bottom: 38px;
+  width: 34%;
+  height: 10px;
+  background: var(--brume);
+  border-radius: 2px;
+}
+
+.combattant {
+  position: absolute;
+  left: 14%;
+  bottom: 48px;
+  width: 26px;
+  height: 26px;
+  margin-left: -13px;
+  border-radius: 50%;
+  background: var(--laiton-clair);
+  border: 3px solid var(--encre);
+  transition: left .45s cubic-bezier(.2,.8,.3,1), bottom .45s cubic-bezier(.2,.8,.3,1), opacity .3s;
+}
+
+.jauge {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  font-family: var(--sans);
+}
+.jauge-valeur {
+  font-size: 2.6rem;
+  font-weight: 800;
+  font-variation-settings: "wdth" 110;
+  line-height: 1;
+  color: var(--laiton-clair);
+  transition: color .3s;
+}
+.jauge-valeur.chaud { color: #e08b3c; }
+.jauge-valeur.brulant { color: #ef5b4c; }
+.jauge-legende { font-size: .8rem; color: #8f9ab8; }
+
+.arene-actions {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.arene-message {
+  font-family: var(--sans);
+  font-size: .85rem;
+  color: #97a2c0;
+  margin: 0;
+  max-width: none;
+}
+.arene-message.ko { color: #ef5b4c; font-weight: 600; }
+
+/* --- Boutons ------------------------------------------------------------ */
+
+.bouton {
+  display: inline-block;
+  font-size: .95rem;
+  font-weight: 600;
+  padding: .7rem 1.4rem;
+  border-radius: 3px;
+  border: 2px solid var(--laiton);
+  background: var(--laiton);
+  color: var(--encre);
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--sans);
+}
+.bouton:hover { background: var(--laiton-clair); border-color: var(--laiton-clair); color: var(--encre); }
+
+.bouton-fantome {
+  background: transparent;
+  color: var(--laiton-clair);
+}
+.bouton-fantome:hover { background: #2a3355; border-color: var(--laiton-clair); color: var(--blanc); }
+
+/* --- Sections ----------------------------------------------------------- */
+
+.section { padding-block: clamp(3rem, 7vw, 5rem); }
+.section-claire { background: var(--givre); border-block: 1px solid var(--trait); }
+
+.section-intro { max-width: 60ch; margin-bottom: 2.5rem; }
+.section-intro p:last-child { margin-bottom: 0; }
+
+/* --- Grilles ------------------------------------------------------------ */
+
+.grille {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.grille-2 { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+
+.pilier {
+  border-top: 3px solid var(--laiton);
+  padding-top: 1rem;
+}
+.pilier p { margin-bottom: 0; font-size: 1rem; color: var(--bleu); }
+
+/* --- Fiche d'identité --------------------------------------------------- */
+
+.fiche {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid var(--trait);
+}
+.fiche dt, .fiche dd {
+  padding: .8rem 0;
+  border-bottom: 1px solid var(--trait);
+  margin: 0;
+}
+.fiche dt {
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--brume);
+  padding-right: 1rem;
+}
+.fiche dd { color: var(--encre); }
+
+/* --- Cartes de légendes ------------------------------------------------- */
+
+.legende {
+  background: var(--blanc);
+  border: 1px solid var(--trait);
+  border-left: 4px solid var(--bleu);
+  border-radius: 2px;
+  padding: 1.1rem 1.25rem;
+}
+.legende h3 { margin-bottom: .15rem; }
+.legende .origine {
+  font-size: .85rem;
+  color: var(--brume);
+  font-family: var(--sans);
+  margin-bottom: .7rem;
+}
+.legende p { font-size: .97rem; margin-bottom: .9rem; }
+
+.armes { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; margin: 0; padding: 0; }
+.arme {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .25rem .55rem;
+  background: var(--ciel);
+  border: 1px solid var(--trait);
+  border-radius: 2px;
+  color: var(--bleu);
+}
+
+/* --- Filtres ------------------------------------------------------------ */
+
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+}
+.filtre {
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 500;
+  padding: .45rem .8rem;
+  border: 1px solid var(--trait);
+  background: var(--blanc);
+  color: var(--bleu);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.filtre:hover { border-color: var(--bleu); }
+.filtre[aria-pressed="true"] {
+  background: var(--encre);
+  border-color: var(--encre);
+  color: var(--ciel);
+}
+
+.vide {
+  font-family: var(--sans);
+  color: var(--brume);
+}
+
+/* --- Tableau ------------------------------------------------------------ */
+
+.tableau-enveloppe { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .97rem;
+  min-width: 34rem;
+}
+caption {
+  text-align: left;
+  font-family: var(--sans);
+  font-size: .85rem;
+  color: var(--brume);
+  padding-bottom: .75rem;
+}
+th, td {
+  text-align: left;
+  padding: .7rem .8rem;
+  border-bottom: 1px solid var(--trait);
+}
+thead th {
+  font-family: var(--sans);
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--ciel);
+  background: var(--bleu);
+}
+tbody tr:hover { background: var(--givre); }
+
+/* --- Touches ------------------------------------------------------------ */
+
+kbd {
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .2rem .5rem;
+  background: var(--blanc);
+  border: 1px solid var(--brume);
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  color: var(--encre);
+}
+
+/* --- Étapes numérotées (vraie séquence) --------------------------------- */
+
+.etapes { counter-reset: etape; list-style: none; margin: 0; padding: 0; }
+.etapes li {
+  counter-increment: etape;
+  position: relative;
+  padding-left: 3.25rem;
+  margin-bottom: 1.6rem;
+}
+.etapes li::before {
+  content: counter(etape);
+  position: absolute;
+  left: 0; top: 0;
+  width: 2.25rem; height: 2.25rem;
+  display: grid; place-items: center;
+  font-family: var(--sans);
+  font-weight: 700;
+  background: var(--encre);
+  color: var(--laiton-clair);
+  border-radius: 50%;
+}
+.etapes p { margin-bottom: 0; }
+
+/* --- Bloc citation / encadré -------------------------------------------- */
+
+.encadre {
+  border-left: 4px solid var(--braise);
+  background: var(--blanc);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+}
+.encadre p:last-child { margin-bottom: 0; }
+
+/* --- Formulaire --------------------------------------------------------- */
+
+.formulaire { display: grid; gap: 1rem; max-width: 34rem; }
+
+label {
+  display: block;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 600;
+  margin-bottom: .35rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  font: inherit;
+  font-size: 1rem;
+  padding: .65rem .8rem;
+  border: 1px solid #3a456b;
+  background: #1c2440;
+  color: var(--ciel);
+  border-radius: 3px;
+}
+input::placeholder, textarea::placeholder { color: #7c86a5; }
+input:focus, textarea:focus, select:focus { border-color: var(--laiton); }
+
+.aide {
+  font-family: var(--sans);
+  font-size: .8rem;
+  color: #97a2c0;
+  margin: .35rem 0 0;
+}
+
+/* --- Pied de page ------------------------------------------------------- */
+
+.pied {
+  background: var(--encre);
+  color: var(--ciel);
+  padding-block: clamp(3rem, 7vw, 4.5rem) 2rem;
+  border-top: 3px solid var(--laiton);
+}
+.pied h2 { color: var(--blanc); }
+.pied p { color: #b9c2da; }
+.pied a { color: var(--laiton-clair); }
+.pied a:hover { color: var(--blanc); }
+
+.pied-grille {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 52rem) {
+  .pied-grille { grid-template-columns: 1.1fr .9fr; }
+}
+
+.pied-liens { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.pied-liens li { margin-bottom: .4rem; }
+
+.pied-bas {
+  border-top: 1px solid #2c3556;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  font-family: var(--sans);
+  font-size: .85rem;
+  color: #8f9ab8;
+}
+.pied-bas p { color: #8f9ab8; margin: 0; }
+
+/* --- Responsive --------------------------------------------------------- */
+
+@media (max-width: 46rem) {
+  .menu-bouton { display: block; }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--encre);
+    border-bottom: 3px solid var(--laiton);
+    padding: .5rem var(--marge) 1rem;
+  }
+  .nav.ouvert { display: block; }
+  .nav ul { flex-direction: column; gap: 0; }
+  .nav-lien { padding: .8rem 0; border-bottom: 1px solid #2c3556; }
+  .nav-lien[aria-current="page"] { border-bottom-color: var(--laiton); }
+  .entete .contenu { position: relative; }
+  .fiche { grid-template-columns: 1fr; }
+  .fiche dt { padding-bottom: 0; border-bottom: 0; }
+  .fiche dd { padding-top: .2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
